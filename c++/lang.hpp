@@ -1,11 +1,14 @@
 #include <any>
 #include <iostream>
+#include <typeinfo>
 
 #pragma once
 
 template <class T = void> class Instruction {
   public:
-    bool hasReturn;
+    bool hasReturn() {
+      return typeid(T) != typeid(void);
+    }
     T run();
 }
 
