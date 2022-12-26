@@ -68,3 +68,18 @@ char *getFileContents(char *src) {
   while(getline(f, t)) r += t;
   return r;
 }
+
+char **getLines(char *src) {
+  std::ifstream f(src);
+  char **r;
+  int i = 0;
+  char *t;
+  while(getline(f, t)) r[i++] = t;
+  return r;
+}
+
+template <class T = int> int length(T *arr) {
+  int r = 0;
+  while(arr[r++] != 0) {}
+  return r;
+}
