@@ -24,8 +24,38 @@ char **split(char *text, char **delim) {
   while(pos < sizeof(s.c_str()) / sizeof(char)) {
     size_t tmp = 0;
     for(int i = 0; i < delim_length; i++)
-      tmp = (size_t)max(tmp, s.find(delim[i], pos));
+      tmp = (size_t)(max(tmp, s.find(delim[i], pos)));
     r[r1++] = s.substr(pos, tmp);
     pos = tmp;
   }
+  return r;
+}
+
+template<class T> size_t indexOf(T *arr, T x) {
+  for(int i = 0; i < sizeof(arr) / sizeof(T); i++)
+    if(arr[i] == x) return i;
+  return -1;
+}
+
+template<class T> size_t lastIndexOf(T *arr, T x) {
+  int r = -1;
+  for(int i = 0; i < sizeof(arr) / sizeof(T); i++)
+    if(arr[i] == x) r = i;
+  return i;
+}
+
+template<class T> bool contains(T *arr, T x) {
+  return indexOf<T>(arr, x) != -1;
+}
+
+void print(std::any value, std::ostream out = std::cout) {
+  out << value;
+}
+
+void println(std::any value, std::ostream out = std::cout) {
+  out << value << "\n";
+}
+
+template<class T> T scan(T x, std::istream in = std::cin) {
+  in >> x;
 }
