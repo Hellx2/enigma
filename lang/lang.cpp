@@ -7,6 +7,8 @@
 
 #include "lang.hpp"
 
+memory document;
+
 typedef std::string str;
 
 using std::printf;
@@ -37,7 +39,21 @@ int main(int argc, char **argv) {
   return 0;
 }
 
+void defineVar(char *name, std::any value) {
+  unsigned int i = sizeof(document.variables)/sizeof(Variable);
+  document.variables[i].value = value;
+  strcpy(document.variables[i].name, value);
+}
+
 void read(char *line) {
   str ln(line);
-  // ...
+  int t = 0;
+  if(ln.substr(0, (t = 9)) == "variable " || ln.substr(0, (t = 4)) == "var " 
+  || ln.substr(0, (t = 8)) == "let mut " || ln.substr(0, (t = 12)) == "let mutable"
+  || ln.substr(0, (t = 4)) == "let " || ln.substr(0, (t = 8)) == "mutable "
+  || ln.substr(0, (t = 4)) == "mut ") {
+    str s = ln.substr(t);
+    // char **vname = ln.split()
+    // ...
+  }
 }
