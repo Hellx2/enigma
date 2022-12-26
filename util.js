@@ -10,7 +10,7 @@ export let range = (start, stop = undefined, step = undefined) {
   return r;
 }
 
-let math = {
+export let math = {
   max: (...nums) => {
     let max = -Infinity;
     for(let num of nums)
