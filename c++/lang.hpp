@@ -1,4 +1,7 @@
 #include <any>
+#include <iostream>
+
+#pragma once
 
 class Instruction {
   public:
@@ -29,10 +32,15 @@ typedef struct {
   NumTypeOpts numOpts = NULL;
 } Type;
 
-typedef struct {}
-
 typedef struct {
   Variable *variables;
   Function *functions;
   Type *types;
 } memory;
+
+template <class T = char*> T input(std::any o, std::ostream out = std::cout, std::istream in = std::cin) {
+  out << o;
+  T r;
+  in >> r;
+  return r;
+}
