@@ -1,3 +1,4 @@
-# enigma-lang
-The Enigma programming language is a language designed to be fast, safe, and easy.
-There are several versions of the compiler, all written in different languages, and all stored in this GitHub page.
+# Enigma
+The Enigma libraries are a large set of stable, easy to use code,
+designed to be as efficient as possible in as many languages as
+possible.
