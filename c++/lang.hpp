@@ -3,10 +3,10 @@
 
 #pragma once
 
-class Instruction {
+template <class T = void> class Instruction {
   public:
     bool hasReturn;
-    std::any run();
+    T run();
 }
 
 typedef struct {
