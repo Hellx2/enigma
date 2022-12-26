@@ -1,6 +1,7 @@
 #include <iostream>
 #include <variant>
 #include <stddef.h>
+#include <fstream>
 #include "math.hpp"
 
 #pragma once
@@ -58,4 +59,12 @@ void println(std::any value, std::ostream out = std::cout) {
 
 template<class T> T scan(T x, std::istream in = std::cin) {
   in >> x;
+}
+
+char *getFileContents(char *src) {
+  std::ifstream f(src);
+  char *r = "";
+  char *t;
+  while(getline(f, t)) r += t;
+  return r;
 }
