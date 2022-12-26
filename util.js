@@ -1,4 +1,4 @@
-export let range = (start, stop = undefined, step = undefined) {
+export let range = (start, stop = undefined, step = undefined) => {
   if(!stop) {
     stop = start;
     start = 0;
@@ -24,5 +24,13 @@ export let math = {
       if(Number(num) < min) 
         min = Number(num);
     return min;
-  }
+  },
+  abs: num => num < 0 ? -num : num,
+  floor: num => parseInt(`${num}`.split(".")[0]),
+  ceil: num => num > this.floor(num) ? this.floor(num) + 1 : num,
+  round: num => num < this.floor(num) + 0.5 ? this.floor(num) : this.ceil(num),
+  trunc: this.floor,
+  rt: (x, rt) => x ** (1 / rt),
+  sqrt: x => this.rt(x, 2),
+  pow: (x, y) => x ** y
 }
