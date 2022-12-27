@@ -53,6 +53,10 @@ public final class Maths {
     return -x / PI * 2 + 1;
   }
   
+  public static double cosine(double x) {
+    return cos(x);
+  }
+  
   public static double sin(double x) {
     if(x != x) return x;
     while(x > PI) x -= PI;
@@ -61,20 +65,48 @@ public final class Maths {
     return x / PI * 2;
   }
   
+  public static double sine(double x) {
+    return sin(x);
+  }
+  
   public static double tan(double x) {
     return sin(x) / cos(x);
+  }
+  
+  public static double tangent(double x) {
+    return tan(x);
   }
   
   public static double cot(double x) {
     return 1 / tan(x);
   }
   
+  public static double cotan(double x) {
+    return cot(x);
+  }
+  
+  public static double cotangent(double x) {
+    return cot(x);
+  }
+  
   public static double sec(double x) {
     return 1 / cos(x);
   }
   
+  public static double secant(double x) {
+    return sec(x);
+  }
+  
   public static double csc(double x) {
     return 1 / sin(x);
+  }
+  
+  public static double cosec(double x) {
+    return csc(x);
+  }
+  
+  public static double cosecant(double x) {
+    return csc(x);
   }
   
   public static double acos(double x) {
@@ -83,6 +115,10 @@ public final class Maths {
   }
   
   public static double arccos(double x) {
+    return acos(x);
+  }
+  
+  public static double arccosine(double x) {
     return acos(x);
   }
   
@@ -97,6 +133,10 @@ public final class Maths {
     return asin(x);
   }
   
+  public static double arcsine(double x) {
+    return asin(x);
+  }
+  
   public static double atan(double x) {
     return acos(1 / sqrt(1 + x * x));
   }
@@ -105,7 +145,63 @@ public final class Maths {
     return atan(x);
   }
   
+  public static double arctangent(double x) {
+    return atan(x);
+  }
+  
   public static double atan2(double y, double x) {
     return atan(x / y);
+  }
+  
+  public static double arctan2(double y, double x) {
+    return atan(x / y);
+  }
+  
+  public static double arctangent2(double y, double x) {
+    return atan(x / y);
+  }
+  
+  public static double acot(double x) {
+    return atan(1 / x);
+  }
+  
+  public static double arccot(double x) {
+    return acot(x);
+  }
+  
+  public static double arccotan(double x) {
+    return acot(x);
+  }
+  
+  public static double arccotangent(double x) {
+    return acot(x);
+  }
+  
+  public static double asec(double x) {
+    return acos(1 / x);
+  }
+  
+  public static double arcsec(double x) {
+    return asec(x);
+  }
+  
+  public static double arcsecant(double x) {
+    return asec(x);
+  }
+  
+  public static double acsc(double x) {
+    return asin(1 / x);
+  }
+  
+  public static double arccsc(double x) {
+    return acsc(x);
+  }
+  
+  public static double asccosec(double x) {
+    return acsc(x);
+  }
+  
+  public static double arccosecant(double x) {
+    return acsc(x);
   }
 }
