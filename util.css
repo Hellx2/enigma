@@ -1,15 +1,43 @@
 .circle {
   border-radius: 50%;
 }
+
 .red {
   color: red;
 }
+
 .bg-red {
   background-color: red;
 }
+
 .blue {
   color: blue;
 }
+
 .bg-blue {
   background-color: blue;
+}
+
+.green {
+  color: green;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.bg-yellow {
+  background-color: yellow;
+}
+
+.orange {
+  color: orange;
+}
+
+.bg-orange {
+  background-color: orange;
 }
