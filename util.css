@@ -49,3 +49,16 @@
 .bg-black {
   background-color: black;
 }
+
+.cyan {
+  color: cyan;
+}
+
+.bg-cyan {
+  background-color: cyan;
+}
+
+* {
+  color: var(--clr);
+  background-color: var(--bg-clr);
+}
