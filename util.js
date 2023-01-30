@@ -34,3 +34,10 @@ export let math = {
   sqrt: x => this.rt(x, 2),
   pow: (x, y) => x ** y
 }
+
+let doc = {};
+
+Object.defineProperty(doc, "#window", {
+  get: ((this) => this.window),
+  writable: false
+});
